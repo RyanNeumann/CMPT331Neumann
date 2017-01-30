@@ -1,0 +1,13 @@
+Ryan Neumann - { (2n+1,10m+7) | n,m ∈ ℕ }
+
+Top-Down
+A pair of natural numbers (x, y) ∈ S if and only if:
+	1. (x, y) = (1, 7), OR
+	2. (x, y-10) ∈ S, OR
+	3. (x-2, y) ∈ S.
+	
+Bottom-Up
+S is the smallest set of natural numbers such that:
+	1. (1, 7) ∈ S, and
+	2. If (x, y) ∈ S, then (x+2, y) ∈ S, and
+	3. If (x, y) ∈ S, then (x, y+10) ∈ S.

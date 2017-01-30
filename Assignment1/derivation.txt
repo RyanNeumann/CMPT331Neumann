@@ -1,0 +1,17 @@
+Ryan Neumann - The hatter went mad.
+
+1. *Sentence*  ::= *Subject* *Predicate* *EndPunctuation*
+2. *Subject*   ::= *Article* *Noun*
+3-5. *Predicate* ::= *Verb* *Noun* | *Verb* *Adjective* | *Adverb* *Verb*
+6-8. *Article*   ::= "A" | "An" | "The"
+9-11. *EndPunctuation* ::= "." | "?" | "!"
+
+Rule 1 => *Subject* *Predicate* *EndPunctuation*
+Rule 2 => *Article* *Noun* *Predicate* *End Punctuation*
+Rule 5 => *Article* *Noun* *Adverb* *Verb* *End Punctuation*
+Rule 8 => "The" *Noun* *Adverb* *Verb* *End Punctuation*
+Rule 9 => "The" *Noun* *Adverb* *Verb* "."
+Implicit Rule Noun => "The" "hatter" *Adverb* *Verb* "."
+Implicit Rule Adverb => "The" "hatter" "went" *Verb* "."
+Implicit Rule Verb => "The" "hatter" "went" "mad" "."
+=> The hatter went mad.  
